@@ -36,4 +36,5 @@ public class opdracht4c {
         leeuwenkooi.voegToe(new Leeuw());
         
         return leeuwenkooi;
+    }
 }

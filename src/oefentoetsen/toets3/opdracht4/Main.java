@@ -11,6 +11,14 @@ package oefentoetsen.toets3.opdracht4;
  */
 public class Main {
     public static void main(String Args[]){
+        maakExhibitFile();
+    }
+    
+    public static void maakExhibitFile(){
+        Exhibit e = new Exhibit();
+            e.voegToe(new Leeuw());
+            e.printExhibit();
+            System.out.println("yay");
         
     }
 }

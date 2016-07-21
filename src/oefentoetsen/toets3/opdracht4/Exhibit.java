@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,7 +24,7 @@ import java.util.logging.Logger;
  * Maak van public class Exhibit<T extends Dier> 
  * public class Exhibit<T extends LevendWezen> 
  */
-public class Exhibit <T extends Dier> {
+public class Exhibit <T extends Dier> implements Serializable {
     ArrayList<T> lijst;
     
     public Exhibit(){
