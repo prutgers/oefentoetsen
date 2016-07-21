@@ -26,6 +26,7 @@ import java.util.logging.Logger;
  */
 public class Exhibit <T extends Dier> implements Serializable {
     ArrayList<T> lijst;
+    ArrayList lijst1 = new ArrayList();
     
     public Exhibit(){
         this.lijst = new ArrayList<T>();
@@ -35,6 +36,10 @@ public class Exhibit <T extends Dier> implements Serializable {
         lijst.add(param);
     }
     
+    public ArrayList<T> getArrayList(){
+        return lijst;
+    }
+    
     
     /**
      * Opdracht 4E
@@ -42,10 +47,10 @@ public class Exhibit <T extends Dier> implements Serializable {
      * de makkelijkste oplossing is om LevendWezen Serializeble te laten implementeren
      */
     public void printExhibit(){
-        File fn = new File("exhibits.dat");
+        File fn = new File("exhibits.txt");
         try(    FileOutputStream fns = new FileOutputStream(fn); 
                 ObjectOutputStream outfile = new ObjectOutputStream(fns);) {
-            outfile.writeObject(this);
+            outfile.writeObject(lijst);
             
         } catch (IOException ex) {
             Logger.getLogger(Exhibit.class.getName()).log(Level.SEVERE, null, ex);

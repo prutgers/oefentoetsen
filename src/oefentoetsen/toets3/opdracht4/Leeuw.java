@@ -15,6 +15,10 @@ import oefentoetsen.toets3.opdracht4.interfaces.Roofdier;
 public class Leeuw extends Dier implements Roofdier{
     String name;
     
+    public Leeuw(){
+        
+    }
+    
     public Leeuw(String name){
         this.name = name;
     }
