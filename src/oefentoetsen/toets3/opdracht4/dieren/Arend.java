@@ -15,11 +15,9 @@ import oefentoetsen.toets3.opdracht4.interfaces.Vlieger;
 public class Arend extends Dier implements Roofdier, Vlieger{
     private String name;
     
-    public Arend(){
-        
-    }
+    
     
     public Arend(String name){
-        this.name = name;
+        super(name);
     }
 }

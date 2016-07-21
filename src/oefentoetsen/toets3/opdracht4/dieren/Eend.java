@@ -15,12 +15,9 @@ import oefentoetsen.toets3.opdracht4.interfaces.Zwemmer;
 public class Eend extends Dier implements Zwemmer, Vlieger {
     private String name;
     
-    public Eend(){
         
-    }
-    
     public Eend(String name){
-        this.name = name;
+        super(name);
     }
     
     

@@ -13,20 +13,9 @@ import oefentoetsen.toets3.opdracht4.interfaces.Roofdier;
  * Deze klasse is deel geimplementeerd voor de lol zodat je beesten een naam kan geven
  */
 public class Leeuw extends Dier implements Roofdier{
-    private String name;
-    
-    public Leeuw(){
-        
-    }
-    
-    public Leeuw(String name){
-        this.name = name;
-    }
-    
-    @Override
-    public String getName(){
-        return this.name;
-    }
    
     
+    public Leeuw(String name){
+        super(name);
+    }
 }

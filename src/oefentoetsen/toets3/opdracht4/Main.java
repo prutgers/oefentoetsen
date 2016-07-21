@@ -19,14 +19,14 @@ public class Main {
     
     public static void maakExhibitFile(){
         Exhibit e = new Exhibit();
-            e.voegToe(new Leeuw("harry"));
-            e.voegToe(new Leeuw("Henk"));
-            e.voegToe(new Eend("Donald"));
-            e.writeExhibit();
-            
-            
-            PrintExhibit print = new PrintExhibit();
-            print.printDierenLijst(e.readExhibit());
+        e.voegToe(new Leeuw("harry"));
+        e.voegToe(new Leeuw("Henk"));
+        e.voegToe(new Eend("Donald"));
+        e.writeExhibit();
+
+
+        PrintExhibit print = new PrintExhibit();
+        print.printDierenLijst(e.readExhibit());
             
         
     }

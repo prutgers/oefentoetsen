@@ -15,6 +15,13 @@ import oefentoetsen.toets3.opdracht4.LevendWezen;
  */
 public abstract class Dier extends LevendWezen {
     private String name;
+    
+    
+    
+    public Dier(String name){
+        this.name = name;
+    }
+    
     public ArrayList<Roofdier> getRoofdier(ArrayList<LevendWezen> lijst) {
         ArrayList<Roofdier> roofdierLijst = new ArrayList<>();
         for(LevendWezen wezen : lijst){
@@ -25,8 +32,10 @@ public abstract class Dier extends LevendWezen {
         return roofdierLijst;
     }
     
+    
+    
     public String getName(){
-        return this.name;
+        return name;
         
     }
 }
