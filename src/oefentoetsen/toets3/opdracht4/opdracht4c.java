@@ -5,6 +5,11 @@
  */
 package oefentoetsen.toets3.opdracht4;
 
+import oefentoetsen.toets3.opdracht4.dieren.Dier;
+import oefentoetsen.toets3.opdracht4.dieren.Leeuw;
+import oefentoetsen.toets3.opdracht4.dieren.Arend;
+import oefentoetsen.toets3.opdracht4.dieren.Eend;
+
 /**
  *
  * @author Peter

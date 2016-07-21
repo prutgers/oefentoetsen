@@ -5,6 +5,9 @@
  */
 package oefentoetsen.toets3.opdracht4;
 
+import oefentoetsen.toets3.opdracht4.dieren.Eend;
+import oefentoetsen.toets3.opdracht4.dieren.Leeuw;
+
 /**
  *
  * @author Peter
@@ -18,8 +21,13 @@ public class Main {
         Exhibit e = new Exhibit();
             e.voegToe(new Leeuw("harry"));
             e.voegToe(new Leeuw("Henk"));
-            e.printExhibit();
-            System.out.println("yay");
+            e.voegToe(new Eend("Donald"));
+            e.writeExhibit();
+            
+            
+            PrintExhibit print = new PrintExhibit();
+            print.printDierenLijst(e.readExhibit());
+            
         
     }
 }

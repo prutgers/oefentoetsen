@@ -5,14 +5,20 @@
  */
 package oefentoetsen.toets3.opdracht4;
 
+import java.awt.BorderLayout;
+import oefentoetsen.toets3.opdracht4.dieren.Dier;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import oefentoetsen.toets3.opdracht4.dieren.Eend;
+import oefentoetsen.toets3.opdracht4.dieren.Leeuw;
 
 /**
  *
@@ -46,14 +52,36 @@ public class Exhibit <T extends Dier> implements Serializable {
      * Vergeet niet dat wat je schrijft serializeble moet zijn
      * de makkelijkste oplossing is om LevendWezen Serializeble te laten implementeren
      */
-    public void printExhibit(){
-        File fn = new File("exhibits.txt");
-        try(    FileOutputStream fns = new FileOutputStream(fn); 
-                ObjectOutputStream outfile = new ObjectOutputStream(fns);) {
-            outfile.writeObject(lijst);
-            
+    public void writeExhibit(){
+        File file = new File("exhibits.dat");
+        try{    
+            FileOutputStream fileoutputstream = new FileOutputStream(file);
+            ObjectOutputStream writeFile = new ObjectOutputStream(fileoutputstream); 
+            writeFile.writeObject(lijst);
         } catch (IOException ex) {
             Logger.getLogger(Exhibit.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public ArrayList readExhibit(){
+        ArrayList<T> arraylist= new ArrayList<>();
+        File file = new File("exhibits.dat");
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            arraylist = (ArrayList) ois.readObject();
+            ois.close();
+            fis.close();
+         }catch(IOException ioe){
+             System.out.println("IOE exception");
+        }catch(ClassNotFoundException c){
+             System.out.println("Class not found");
+        }
+        
+        
+        return arraylist;
+        
+    }
+    
+    
 }

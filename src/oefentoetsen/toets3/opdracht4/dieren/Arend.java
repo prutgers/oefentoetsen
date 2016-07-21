@@ -3,24 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oefentoetsen.toets3.opdracht4;
+package oefentoetsen.toets3.opdracht4.dieren;
 
 import oefentoetsen.toets3.opdracht4.interfaces.Roofdier;
+import oefentoetsen.toets3.opdracht4.interfaces.Vlieger;
 
 /**
  *
  * @author Peter
- * Deze klasse is deel geimplementeerd voor de lol zodat je beesten een naam kan geven
  */
-public class Leeuw extends Dier implements Roofdier{
-    String name;
+public class Arend extends Dier implements Roofdier, Vlieger{
+    private String name;
     
-    public Leeuw(){
+    public Arend(){
         
     }
     
-    public Leeuw(String name){
+    public Arend(String name){
         this.name = name;
     }
-    
 }

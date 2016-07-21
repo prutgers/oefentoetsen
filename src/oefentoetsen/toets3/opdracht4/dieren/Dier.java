@@ -3,17 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oefentoetsen.toets3.opdracht4;
+package oefentoetsen.toets3.opdracht4.dieren;
 
 import oefentoetsen.toets3.opdracht4.interfaces.Roofdier;
 import java.util.ArrayList;
+import oefentoetsen.toets3.opdracht4.LevendWezen;
 
 /**
  *
  * @author Peter
  */
 public abstract class Dier extends LevendWezen {
-    
+    private String name;
     public ArrayList<Roofdier> getRoofdier(ArrayList<LevendWezen> lijst) {
         ArrayList<Roofdier> roofdierLijst = new ArrayList<>();
         for(LevendWezen wezen : lijst){
@@ -22,5 +23,10 @@ public abstract class Dier extends LevendWezen {
             }
         }
         return roofdierLijst;
+    }
+    
+    public String getName(){
+        return this.name;
+        
     }
 }

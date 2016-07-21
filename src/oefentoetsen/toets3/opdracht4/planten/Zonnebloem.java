@@ -3,16 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oefentoetsen.toets3.opdracht4;
+package oefentoetsen.toets3.opdracht4.planten;
 
-import oefentoetsen.toets3.opdracht4.interfaces.Roofdier;
-import oefentoetsen.toets3.opdracht4.interfaces.Vlieger;
+import oefentoetsen.toets3.opdracht4.interfaces.Eenjarig;
 
 /**
  *
  * @author Peter
  */
-public class Arend extends Dier implements Roofdier, Vlieger{
-    
+public class Zonnebloem extends Plant implements Eenjarig {
     
 }
