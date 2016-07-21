@@ -5,6 +5,9 @@
  */
 package oefentoetsen.toets3.opdracht4;
 
+import oefentoetsen.toets3.opdracht4.interfaces.Vlieger;
+import oefentoetsen.toets3.opdracht4.interfaces.Zwemmer;
+
 /**
  *
  * @author Peter

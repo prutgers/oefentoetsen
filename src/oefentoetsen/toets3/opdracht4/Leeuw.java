@@ -5,6 +5,8 @@
  */
 package oefentoetsen.toets3.opdracht4;
 
+import oefentoetsen.toets3.opdracht4.interfaces.Roofdier;
+
 /**
  *
  * @author Peter

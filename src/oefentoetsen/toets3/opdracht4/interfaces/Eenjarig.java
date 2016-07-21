@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oefentoetsen.toets3.opdracht4;
-
-import java.util.ArrayList;
+package oefentoetsen.toets3.opdracht4.interfaces;
 
 /**
  *
  * @author Peter
- * 
- * Deze klasse heet orgineel JAGER
  */
-public interface Roofdier {
-    
+public interface Eenjarig {
     
 }

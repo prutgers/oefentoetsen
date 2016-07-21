@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oefentoetsen.toets3.opdracht4;
+package oefentoetsen.toets3.opdracht4.interfaces;
 
 /**
  *
  * @author Peter
  */
-public interface Vlieger {
+public interface Prikkelbaar extends OpgeroldBlad {
     
 }
