@@ -16,7 +16,8 @@ public class Main {
     
     public static void maakExhibitFile(){
         Exhibit e = new Exhibit();
-            e.voegToe(new Leeuw());
+            e.voegToe(new Leeuw("harry"));
+            e.voegToe(new Leeuw("Henk"));
             e.printExhibit();
             System.out.println("yay");
         
