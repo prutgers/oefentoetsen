@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oefentoetsen.toets3.opdracht4;
+package oefentoetsen.toets3.opdracht4.utils;
 
 import java.awt.BorderLayout;
 import oefentoetsen.toets3.opdracht4.dieren.Dier;
@@ -32,7 +32,7 @@ import oefentoetsen.toets3.opdracht4.dieren.Leeuw;
  */
 public class Exhibit <T extends Dier> implements Serializable {
     ArrayList<T> lijst;
-    ArrayList lijst1 = new ArrayList();
+    
     
     public Exhibit(){
         this.lijst = new ArrayList<T>();
@@ -47,29 +47,34 @@ public class Exhibit <T extends Dier> implements Serializable {
     }
     
     
+            
+    
+    
     /**
      * Opdracht 4E
      * Vergeet niet dat wat je schrijft serializeble moet zijn
      * de makkelijkste oplossing is om LevendWezen Serializeble te laten implementeren
      */
-    public void writeExhibit(){
+    public void write(){
         File file = new File("exhibits.dat");
         try{    
             FileOutputStream fileoutputstream = new FileOutputStream(file);
             ObjectOutputStream writeFile = new ObjectOutputStream(fileoutputstream); 
-            writeFile.writeObject(lijst);
+            writeFile.writeObject(this);
         } catch (IOException ex) {
             Logger.getLogger(Exhibit.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
-    public ArrayList readExhibit(){
-        ArrayList<T> arraylist= new ArrayList<>();
+  
+    
+    public Exhibit read(){
+        Exhibit exhibit = new Exhibit();
         File file = new File("exhibits.dat");
         try {
             FileInputStream fis = new FileInputStream(file);
             ObjectInputStream ois = new ObjectInputStream(fis);
-            arraylist = (ArrayList) ois.readObject();
+            exhibit = (Exhibit) ois.readObject();
             ois.close();
             fis.close();
          }catch(IOException ioe){
@@ -79,7 +84,13 @@ public class Exhibit <T extends Dier> implements Serializable {
         }
         
         
-        return arraylist;
+        return exhibit;
+        
+    }
+    
+    public void printLijst(){
+        System.out.println(this.lijst.toString());
+        
         
     }
     

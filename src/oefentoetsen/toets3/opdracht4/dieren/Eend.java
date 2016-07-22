@@ -17,7 +17,7 @@ public class Eend extends Dier implements Zwemmer, Vlieger {
     
         
     public Eend(String name){
-        super(name);
+        super("Eend "+ name);
     }
     
     

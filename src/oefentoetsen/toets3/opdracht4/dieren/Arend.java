@@ -18,6 +18,6 @@ public class Arend extends Dier implements Roofdier, Vlieger{
     
     
     public Arend(String name){
-        super(name);
+        super("Arend " + name);
     }
 }

@@ -7,7 +7,7 @@ package oefentoetsen.toets3.opdracht4.dieren;
 
 import oefentoetsen.toets3.opdracht4.interfaces.Roofdier;
 import java.util.ArrayList;
-import oefentoetsen.toets3.opdracht4.LevendWezen;
+import oefentoetsen.toets3.opdracht4.utils.LevendWezen;
 
 /**
  *
@@ -15,21 +15,21 @@ import oefentoetsen.toets3.opdracht4.LevendWezen;
  */
 public abstract class Dier extends LevendWezen {
     private String name;
-    
+    private int snelheid;
     
     
     public Dier(String name){
         this.name = name;
     }
     
-    public ArrayList<Roofdier> getRoofdier(ArrayList<LevendWezen> lijst) {
-        ArrayList<Roofdier> roofdierLijst = new ArrayList<>();
-        for(LevendWezen wezen : lijst){
-            if(wezen instanceof Roofdier){
-                roofdierLijst.add((Roofdier) wezen);
-            }
-        }
-        return roofdierLijst;
+    public Dier(String name, int snelheid){
+        this.name = name;
+        this.snelheid = snelheid;
+    }
+    
+    @Override
+    public String toString(){
+        return this.name;
     }
     
     

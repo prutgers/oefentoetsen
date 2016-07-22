@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oefentoetsen.toets3.opdracht4;
+package oefentoetsen.toets3.opdracht4.utils;
 
 import java.util.ArrayList;
 import oefentoetsen.toets3.opdracht4.dieren.*;

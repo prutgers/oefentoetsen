@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oefentoetsen.toets3.opdracht4;
-
-import java.io.Serializable;
+package oefentoetsen.toets3.opdracht4.dieren;
 
 /**
  *
  * @author Peter
  */
-public abstract class LevendWezen implements Serializable{
+public class Rabbit extends Dier {
+    
+    public Rabbit(String name){
+        super("Rabbit " + name, 6);
+    }
     
 }

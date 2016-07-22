@@ -16,6 +16,6 @@ public class Leeuw extends Dier implements Roofdier{
    
     
     public Leeuw(String name){
-        super(name);
+        super("Leeuw " + name);
     }
 }

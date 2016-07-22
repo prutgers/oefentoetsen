@@ -5,8 +5,9 @@
  */
 package oefentoetsen.toets3.opdracht4;
 
-import oefentoetsen.toets3.opdracht4.dieren.Eend;
-import oefentoetsen.toets3.opdracht4.dieren.Leeuw;
+import oefentoetsen.toets3.opdracht4.utils.Exhibit;
+import oefentoetsen.toets3.opdracht4.dieren.*;
+import oefentoetsen.toets3.opdracht4.utils.Opdracht4c;
 
 /**
  *
@@ -19,14 +20,25 @@ public class Main {
     
     public static void maakExhibitFile(){
         Exhibit e = new Exhibit();
-        e.voegToe(new Leeuw("harry"));
-        e.voegToe(new Leeuw("Henk"));
+        e.voegToe(new Leeuw("Alex"));
+        e.voegToe(new Leeuw("Simba"));
         e.voegToe(new Eend("Donald"));
-        e.writeExhibit();
+        e.voegToe(new Rabbit("Xzibit"));
+        e.printLijst();
+        e.write();
+        
+        Exhibit exhib = e.read();
 
-
-        PrintExhibit print = new PrintExhibit();
-        print.printDierenLijst(e.readExhibit());
+        exhib.printLijst();
+        
+        
+        
+        Opdracht4c o4c = new Opdracht4c();
+        o4c.maakLeeuwLijst();
+        
+        
+        
+                
             
         
     }
