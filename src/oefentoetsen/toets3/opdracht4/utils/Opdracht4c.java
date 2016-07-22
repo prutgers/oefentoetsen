@@ -24,7 +24,8 @@ public class Opdracht4c {
     
     
     public void opdracht4C() {
-        //Mag wel new Exhibit<Leeuw>() maar hoeft niet
+        //Deze manier van declareren vind ik fijn want het is heel duidelijk
+        //maar je zou ook Exhibt<Leeuw> leeuwenkooi = new Exhibit<>;
         Exhibit<Leeuw> leeuwenkooi = new Exhibit<Leeuw>();
         leeuwenkooi.voegToe(new Leeuw("Arie"));
         

@@ -67,8 +67,11 @@ public class Exhibit <T extends Dier> implements Serializable {
     }
     
   
-    
-    public Exhibit read(){
+    /**
+     * 
+     * @return 
+     */
+    public static Exhibit read(){
         Exhibit exhibit = new Exhibit();
         File file = new File("exhibits.dat");
         try {
