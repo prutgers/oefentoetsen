@@ -44,12 +44,6 @@ public class Opdracht4c {
         leeuwenkooi.voegToe(new Leeuw("Leo"));
         leeuwenkooi.voegToe(new Leeuw("Loeki"));
         leeuwenkooi.voegToe(new Leeuw("Paul"));
-        
-        
-       
-        
-        leeuwenkooi.printLijst();
-        
         return leeuwenkooi;
     }
 }

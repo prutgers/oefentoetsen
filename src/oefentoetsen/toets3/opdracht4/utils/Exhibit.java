@@ -88,11 +88,11 @@ public class Exhibit <T extends Dier> implements Serializable {
         
     }
     
-    public void printLijst(){
+    public void print(){
         System.out.println(this.lijst.toString());
-        
-        
     }
+    
+   
     
     
 }

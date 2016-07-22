@@ -24,22 +24,16 @@ public class Main {
         e.voegToe(new Leeuw("Simba"));
         e.voegToe(new Eend("Donald"));
         e.voegToe(new Rabbit("Xzibit"));
-        e.printLijst();
         e.write();
         
         Exhibit exhib = e.read();
 
-        exhib.printLijst();
+        //exhib.print();
         
         
         
         Opdracht4c o4c = new Opdracht4c();
-        o4c.maakLeeuwLijst();
-        
-        
-        
-                
-            
-        
-    }
+       Exhibit exhibit = o4c.maakLeeuwLijst();
+       exhibit.print();
+       }
 }
