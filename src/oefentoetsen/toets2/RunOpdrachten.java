@@ -45,6 +45,7 @@ public class RunOpdrachten {
     public void opdracht10(){
         Auto a = new SportAuto();
         SportAuto b = new SportAuto();
+        
         /** Het aanroepen van de VARIABELE verwijst naar de gedeclareerde klasse in dit geval Auto en is dus 8
          * het aanroepen van een methode geld voor de geinitieerde klasse in dit geval SportAuto en is dus SportAuto
          */
