@@ -20,7 +20,7 @@ import java.util.List;
  * Deze klasse zal niet werken tenzij je een SQL tabel creert waarbij je kan in loggen met user/wachtwoord.
  * De tabel moet klant heten en voorzien zijn van id, voornaam, achternaam en email.
  */
-public class KlantDAOMySQL {
+public class ZevenC {
     
     public List<Klant> FindAll(){
         //maar een lijst aan waar klanten in kunnen
