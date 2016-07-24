@@ -8,7 +8,7 @@ import java.io.*;
 
 /**
  *
- * @author Peter
+ *  @author Peter
  */
 
 //Voeg aan de klasse toe implements Serializable anders kan je niet schrijven
@@ -17,6 +17,7 @@ public class Opdracht1 implements Serializable {
     private double b = 5.5;  
     private String m = "value is too small";
      
+    
     public static void main(String[] args) throws Exception   {    
         Opdracht1 o1 = new Opdracht1();        
         ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("Test.dat"));      
