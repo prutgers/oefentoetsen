@@ -15,6 +15,7 @@ public class Opdracht8 {
         
         int[] arr = new int[size]; // gelijk aan int[] arr = new int[10];
         for (int i = 0 ; i < size ; ++i) {
+            //Print 10 keer 0 uit, want array is alleen declareerd niet geinitializeerd
             System.out.println("i is: " + i + " arr[i] is: " + arr[i]);
         }
     }

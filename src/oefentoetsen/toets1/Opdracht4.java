@@ -8,9 +8,13 @@ package oefentoetsen.toets1;
 /**
  *
  * @author Peter
+ * 
+ * 
  */
 public class Opdracht4 {
     public static void main(String args[]) {
+        //Als een array wordt geinitialiseerd maar nog geen waardes heeft zijn deze
+        //in het geval van een String null
         String[] dataArr = new String[4];
         dataArr[1] = "Bill";
         dataArr[2] = "Steve";
@@ -19,4 +23,5 @@ public class Opdracht4 {
             System.out.print(data + " ");
         }
     }
-}
+}  
+

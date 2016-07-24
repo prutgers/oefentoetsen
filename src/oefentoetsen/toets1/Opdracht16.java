@@ -24,6 +24,8 @@ public class Opdracht16 {
     public int indexVanKleinsteElementB(double[] array){
         int index = 0;
         for(int i = 0; i <array.length; i++){
+            
+            //slaat het index nummer op van het kleinste getal
             if(array[index] > array[i]){
                 index = i;
             }
