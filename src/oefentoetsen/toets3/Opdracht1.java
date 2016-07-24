@@ -19,7 +19,9 @@ public class Opdracht1 implements Serializable {
      
     public static void main(String[] args) throws Exception   {    
         Opdracht1 o1 = new Opdracht1();        
-        ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("Test.dat"));        
+        ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("Test.dat"));      
+        
+        //Schrijf het object van Opdracht1 weg
         output.writeObject(o1);    
         output.close();      
     } 

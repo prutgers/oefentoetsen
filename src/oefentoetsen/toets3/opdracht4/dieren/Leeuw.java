@@ -14,8 +14,10 @@ import oefentoetsen.toets3.opdracht4.interfaces.Roofdier;
  */
 public class Leeuw extends Dier implements Roofdier{
    
-    
+     //Maak een Leeuw en geef hem een naam 
     public Leeuw(String name){
+         //De naam van de Leeuw wordt doorgegeven aan de super (Dier in dit geval)
+        //en wordt daar opgeslagen
         super("Leeuw " + name);
     }
 }

@@ -12,14 +12,22 @@ import oefentoetsen.toets3.opdracht4.utils.Opdracht4c;
 /**
  *
  * @author Peter
+ * Opdracht 4a is te vinden in de Utils package met klassenaam Opdracht4a Jager is veranderd naar RoofDier
+ * Opdracht 4b is te vinden in de Utils package, met klassenaam Exhibit
+ * Opdracht 4c is te vinden in de Utils package met klassenaam Opdracht 4c
+ * Opdracht 4d is te vinden in de Utils package met klassenaam Exhibit, in de comments boven aan
+ * Opdracht 4e is te vinden in de Utils package met klassenaam Exhibit in de methode write
+ * 
  * 
  * 
  */
 public class Main {
     public static void main(String Args[]){
+        //test de read en write methodes van Exhibit
         writeExhibitFile();
         readExhibitFile();
         
+        //Test opdracht4C
         opdracht4c();
         
         

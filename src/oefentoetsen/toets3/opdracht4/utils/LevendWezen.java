@@ -11,6 +11,6 @@ import java.io.Serializable;
  *
  * @author Peter
  */
-public abstract class LevendWezen implements Serializable{
+public abstract class LevendWezen {
     
 }

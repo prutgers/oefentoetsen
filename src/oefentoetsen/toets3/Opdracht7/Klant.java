@@ -8,6 +8,9 @@ package oefentoetsen.toets3.Opdracht7;
 /**
  *
  * @author Peter
+ * 
+ * Deze klasse is gemaakt zodat KlantDAOMySQL geen foutmeldingen geeft.
+ * 
  */
 public class Klant {
     private long id;

@@ -16,19 +16,26 @@ import java.util.List;
 /**
  *
  * @author Peter
+ * 
+ * Deze klasse zal niet werken tenzij je een SQL tabel creert waarbij je kan in loggen met user/wachtwoord.
+ * De tabel moet klant heten en voorzien zijn van id, voornaam, achternaam en email.
  */
 public class KlantDAOMySQL {
     
     public List<Klant> FindAll(){
+        //maar een lijst aan waar klanten in kunnen
         List<Klant> klantList = new ArrayList<>();
+        
+        //Instellingen voor de database
         String user = "user";
         String password = "wachtwoord";
         String datbaseUrl = "jdbc:mysql://localhost/bedrijf";
     
-    //Connectie en PreparedStament (ook ResultSet) kunnen met try-with-resources geopend worden
+        //Probeer connectie te maken met de DB (zal dus mislukken als deze niet bestaat)
+        // Instellen van het PreparedStatement, in dit geval voegt het preparedstatement niet heel veel toe
+        //ten opzichte van een gewoon statement
         try(Connection connection = DriverManager.getConnection(datbaseUrl, user, password);
-        PreparedStatement preparedStatement =
-        connection.prepareStatement( "select * from klant" )) {
+        PreparedStatement preparedStatement = connection.prepareStatement( "select * from klant" )) {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Klant klant = new Klant();
@@ -38,7 +45,8 @@ public class KlantDAOMySQL {
                 klant.setEmail(resultSet.getString("email"));
                 klantList.add(klant);
             }
-        resultSet.close(); //wordt sowieso samen met PreparedStament gesloten
+        //Een prepared statement sluit automatisch de verbinding af dus dat hoeft nu niet te gebeuren.
+        
         } catch (SQLException e) {
             System.out.println("Error: " + e.getMessage());
         }

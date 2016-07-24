@@ -8,6 +8,9 @@ package oefentoetsen.toets3.opdracht16.Decorator;
 /**
  *
  * @author Peter
+ * 
+ * Dit maakt de Decorator design pattern maar de beste uitleg is
+ * waarschijnlijk dit filmpje van Derek Banas: https://www.youtube.com/watch?v=j40kRwSm4VE
  */
 public interface Featurizer {
     String addFeature();

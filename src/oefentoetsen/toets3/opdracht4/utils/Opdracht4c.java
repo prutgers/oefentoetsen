@@ -26,6 +26,7 @@ public class Opdracht4c {
     public void opdracht4C() {
         //Deze manier van declareren vind ik fijn want het is heel duidelijk
         //maar je zou ook Exhibt<Leeuw> leeuwenkooi = new Exhibit<>;
+        //zoals je ziet bij vogelnest en vanAsselWat
         Exhibit<Leeuw> leeuwenkooi = new Exhibit<Leeuw>();
         leeuwenkooi.voegToe(new Leeuw("Arie"));
         

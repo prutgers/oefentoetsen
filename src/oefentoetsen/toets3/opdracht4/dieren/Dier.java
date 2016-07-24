@@ -12,19 +12,24 @@ import oefentoetsen.toets3.opdracht4.utils.LevendWezen;
 /**
  *
  * @author Peter
+ * 
+ * De klasse dier wordt door ieder dier geextend zodat ieder dier
+ * op Dier niveau een snelheid en een naam kan krijgen.
  */
 public abstract class Dier extends LevendWezen {
+    //Naam van het dier
     private String name;
-    private int snelheid;
+    //Top snelheid van het dier in KM/uur
+    private int speed;
     
     
     public Dier(String name){
         this.name = name;
     }
     
-    public Dier(String name, int snelheid){
+    public Dier(String name, int speed){
         this.name = name;
-        this.snelheid = snelheid;
+        this.speed = speed;
     }
     
     @Override
@@ -33,9 +38,14 @@ public abstract class Dier extends LevendWezen {
     }
     
     
-    
+    //Getter voor name
     public String getName(){
         return name;
         
+    }
+    
+    //Getter voor speed
+    public int getSpeed(){
+        return this.speed;
     }
 }

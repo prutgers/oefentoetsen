@@ -8,8 +8,16 @@ package oefentoetsen.toets3.opdracht16.TemplatePattern;
 /**
  *
  * @author Peter
+ * 
+ * 
+ * De beste uitleg voor de Template Methode Design is 
+ * dit filmpje van Derek Banas: https://www.youtube.com/watch?v=aR1B8MlwbRI
+ * 
  */
 public class TemplateTest {
+    
+    
+    
     
     public static void Main(String[] Args){
         TemplateUser t = new TemplateUser();

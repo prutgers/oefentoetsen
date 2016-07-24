@@ -13,10 +13,12 @@ import oefentoetsen.toets3.opdracht4.interfaces.Zwemmer;
  * @author Peter
  */
 public class Eend extends Dier implements Zwemmer, Vlieger {
-    private String name;
     
-        
+    
+     //Maak een Eend en geef hem een naam    
     public Eend(String name){
+         //De naam van de Eend wordt doorgegeven aan de super (Dier in dit geval)
+        //en wordt daar opgeslagen
         super("Eend "+ name);
     }
     

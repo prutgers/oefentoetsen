@@ -13,11 +13,12 @@ import oefentoetsen.toets3.opdracht4.interfaces.Vlieger;
  * @author Peter
  */
 public class Arend extends Dier implements Roofdier, Vlieger{
-    private String name;
+        
     
-    
-    
+    //Maak een Arend en geef hem een naam
     public Arend(String name){
+        //De naam van de Arend wordt doorgegeven aan de super (Dier in dit geval)
+        //en wordt daar opgeslagen
         super("Arend " + name);
     }
 }

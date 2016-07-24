@@ -5,7 +5,6 @@
  */
 package oefentoetsen.toets3.opdracht4.utils;
 
-import java.awt.BorderLayout;
 import oefentoetsen.toets3.opdracht4.dieren.Dier;
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,8 +16,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import oefentoetsen.toets3.opdracht4.dieren.Eend;
-import oefentoetsen.toets3.opdracht4.dieren.Leeuw;
 
 /**
  *
@@ -30,18 +27,19 @@ import oefentoetsen.toets3.opdracht4.dieren.Leeuw;
  * Maak van public class Exhibit<T extends Dier> 
  * public class Exhibit<T extends LevendWezen> 
  */
+
+//Je wilt zorgen dat exhibit alleen Dieren toegevoegd kunnen worden
+//hiervoor zorg je door er T extends Dier neer te zetten
 public class Exhibit <T extends Dier> implements Serializable {
-    ArrayList<T> lijst;
+    //Maak ArrayList
+    ArrayList<T> lijst = new ArrayList<T>();
     
-    
-    public Exhibit(){
-        this.lijst = new ArrayList<T>();
-    }
-    
+    //Setter methode om dier toe te voegen aan de dieren lijst
     public void voegToe(T param){
         lijst.add(param);
     }
     
+    //getter methode om lijst met dieren op te halen
     public ArrayList<T> getArrayList(){
         return lijst;
     }
@@ -52,8 +50,8 @@ public class Exhibit <T extends Dier> implements Serializable {
     
     /**
      * Opdracht 4E
-     * Vergeet niet dat wat je schrijft serializeble moet zijn
-     * de makkelijkste oplossing is om LevendWezen Serializeble te laten implementeren
+     * Vergeet niet dat wat je schrijft serializeble moet zijn in dit geval schrijven we de klasse Exhibit weg
+     * dus moet Exhibit serializeble zijn.
      */
     public void write(){
         File file = new File("exhibits.dat");
@@ -68,7 +66,8 @@ public class Exhibit <T extends Dier> implements Serializable {
     
   
     /**
-     * 
+     * Dit is geen opdracht, maar toch even leuk om te doen schrijf een methode die 
+     * Het weggeschrijven bestand exhibits.dat weer op haalt
      * @return 
      */
     public static Exhibit read(){
